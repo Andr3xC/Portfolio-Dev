@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 }
-
+import Header from '../components/Header.astro';
 const { title } = Astro.props;
 ---
 
@@ -17,35 +17,60 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header>
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--black_back: #222222;
+		--black_in: #252525;
+		--grey: #333333;
+		--
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background: #222;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	
+	body{
+		display: flex;
+		padding: 0;
+		justify-content: center;
+		height: 100vh;
+		min-height: 100vh;
+		font-size: 1rem;
+		color: white;
+		background:var(--black_back);
+		background-size: cover;
 	}
+
+	a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+	font-size: 1.5rem;
+	}
+
+	/*--- Menu bar ---*/ 
+	header{
+	padding: 1em 0rem;
+    position: flex;
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	}
+
+	.logo_portfolio{
+		height: 2rem;
+		width: 2rem;
+		padding-left: 0.5rem;
+	}
+
 </style>
