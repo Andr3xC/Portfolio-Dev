@@ -1,8 +1,11 @@
 ---
+import Header from '../components/Header.astro';
+import "@fontsource/titillium-web"
+
 interface Props {
 	title: string;
 }
-import Header from '../components/Header.astro';
+
 const { title } = Astro.props;
 ---
 
@@ -17,7 +20,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header>
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -27,50 +30,24 @@ const { title } = Astro.props;
 		--black_back: #222222;
 		--black_in: #252525;
 		--grey: #333333;
-		--
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #222;
+		scroll-behavior: smooth;
+		font-family: 'Titilliu9m Web', sans-serif;
 	}
 	
 	body{
 		display: flex;
-		padding: 0;
+		flex-direction: column;
 		justify-content: center;
-		height: 100vh;
-		min-height: 100vh;
-		font-size: 1rem;
-		color: white;
-		background:var(--black_back);
-		background-size: cover;
+		align-items: center;
+		background: linear-gradient(to top, #252525, #28292d, #292e35, #27343c, #243a41);
 	}
 
 	a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-	font-size: 1.5rem;
+		font-size: 25px;
 	}
 
-	/*--- Menu bar ---*/ 
-	header{
-	padding: 1em 0rem;
-    position: flex;
-    background-color: transparent;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-	}
-
-	.logo_portfolio{
-		height: 2rem;
-		width: 2rem;
-		padding-left: 0.5rem;
-	}
 
 </style>
