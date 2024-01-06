@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Container from '../components/Container.astro';
+import Footer from '../components/footer.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de Andr3xC - Desarrollador fullstack"
+		description='Contacta a Andr3xC para contratarlo como desarrollador full stack'>
 
 	<main>
-		<section class="w-full lg:w-[1380px] h-100vh mx-auto py-80 px-16 flex items-center justify-between">
+		<Container id = "top">
 			<div class="border-spacing-2 p-2 bg-grey">
 				<div class="bg-black_in p-10">
 					<h1 class = "text-white font-bold text-4xl uppercase flex justify-center flex-row"> Andrés Felipe Chavarro</h1>
@@ -19,28 +22,40 @@ import Card from '../components/Card.astro';
 			src="https://lapi.com.mx/web/image/product.template/5265/image_1024?unique=9f103a0"
 			alt="Main_photo"
 			class="w-80 h-80"/>
+		</Container>
 
-		</section>
 
-		<section class="w-full lg:w-[1380px] h-[609px] py-80 px-16 flex items-center justify-between">
+		<Container id = "about">
+			<div class="w-[610px] h-[400px] p-2 bg-grey">
+				<div class="bg-black_in p-10 h-full justify-center">
+					<h1 class="text-white text-5xl flex justify-center uppercase mx-auto flex-row">About me!!</h1>
+					<p class="text-white text-xl text-pretty flex justify-center py-5 flex-row">
+						Systems engineer with a passion for all types of technology, learning about them through self-taught methods
+					</p>
+					<p class="text-white text-xl text-pretty flex justify-center flex-row ">
+						Use of many technological tools for all types of production areas. Likewise, I look for and analyze different points of view to solve problems.					
+					</p>
+				</div>
+			</div>
+
 			<div class="w-[565px] h-[609px]">
 				
 			</div>
-			<div class="w-[610px] h-[600px] p-2 bg-grey">
-				<div class="bg-black_in p-10 h-full">
-					<h1>Wh</h1>
-				</div>
-			</div>
-		</section>
+		</Container>
 
-		<section class="w-full lg:w-[1380px] h-[609px] py-80 px-16 flex items-center justify-between">
+		<Container id = "proyects" class="w-full lg:w-[1380px] h-[609px] py-80 px-16 flex items-center justify-between">
 			<div class="w-full h-[600px] p-2 bg-grey">
 				<div class="bg-black_in p-10 h-full">
 					<h1>Wh</h1>
 				</div>
 			</div>
-		</section>
+		</Container>
 
+		<Container id = "Contact">
+			
+		</Container>
+
+		<Footer/>
 	</main>
 	
 </Layout>
